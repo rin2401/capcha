@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Capcha</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="simple-captcha-core.css">
+    <style>
+        /* Add some basic styling for the form */
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="example-id" onsubmit="return false">
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+<script src="simple-captcha-core.js"></script>
+<script>
+    const captcha = new SimpleCaptcha()
+    captcha.init({
+        ribbon: {
+            display: true,
+        },
+        captcha: {
+            display: true,
+            formId: 'example-id',
+            algorightm: 'random-string',
+            difficulty: 'hard'
+        }
+    })
+</script>
+
+</html>
