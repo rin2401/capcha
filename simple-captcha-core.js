@@ -142,7 +142,7 @@ class SimpleCaptcha {
         console.log("Captcha is valid");
         flagElement.style.color = "green";
         flagElement.textContent = "Captcha is valid!";
-        sleep(2000).then(() => {
+        sleep(1000).then(() => {
           form.submit();
         });
       } else {
