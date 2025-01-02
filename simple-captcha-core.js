@@ -74,7 +74,7 @@ class SimpleCaptcha {
     simpleCaptchaRibbon.appendChild(ribbonText);
     if (ribbonConfig.icon) {
       const captchaImage = document.createElement("img");
-      captchaImage.src = "assets/img/icon.svg";
+      captchaImage.src = "capcha/assets/img/icon.svg";
       captchaImage.alt = "CAPTCHA Icon";
       captchaImage.style.width = "15px"; // Changed from style to style.width
       simpleCaptchaRibbon.appendChild(captchaImage);
@@ -115,7 +115,7 @@ class SimpleCaptcha {
     inputElement.type = "number";
     inputElement.className = defaultCSSClasses.captcha.input;
     const refreshElement = document.createElement("img");
-    refreshElement.src = "assets/img/arrow-clockwise.svg";
+    refreshElement.src = "capcha/assets/img/arrow-clockwise.svg";
     refreshElement.width = 20;
     refreshElement.style.cursor = "pointer";
     refreshElement.addEventListener("click", function () {
